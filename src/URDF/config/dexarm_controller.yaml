@@ -1,0 +1,17 @@
+arm_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - B_rot
+    - In_1
+    - Join
+    - In_2
+    - EE
+    - Out_1
+    - Out_2
+    - GripperAxis
+    - GripperFingerA2
+    - GripperFingerA3
+    - GripperFingerA4
+    - GripperFingerA5
+    - GripperFingerB2
+    - 
