@@ -604,4 +604,236 @@
     <mimic joint="GripperFingerA1->GripperFingerA2" multiplier="1" offset="0" />
   </joint>
   
+                    <!--TRANSMISSION-->
+
+<transmission name ="Trans_B_rot">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="bases">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="B_rot_Motor">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_In_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="B_rot->In_1">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_In_1">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_Join">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="In_1->Join">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_Join">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_In_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Join->In_2">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_In_2">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_EE">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="In_2->EE">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_EE">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+
+                    <!--THESE ONES ARE NOT FUNCTIONAL-->
+
+<transmission name ="Trans_Out_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Join->Out_1">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_Out_1">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_Out_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Join->Out_2">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_Out_2">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperAxis">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperMount->GripperAxis">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperAxis">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperFingerA2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperFingerA1->GripperFingerA2">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperFingerA2">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperFingerA3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperFingerA2->GripperFingerA3">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperFingerA3">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperFingerA4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperFingerA3->GripperFingerA4">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperFingerA4">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperFingerA5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperFingerA4->GripperFingerA5">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperFingerA5">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperFingerB2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperFingerB1->GripperFingerB2">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperFingerB2">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperFingerB3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperFingerB2->GripperFingerB3">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperFingerB3">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperFingerB4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperFingerB3->GripperFingerB4">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperFingerB4">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperFingerB5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperFingerB4->GripperFingerB5">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperFingerB5">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperFingerC2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperFingerC1->GripperFingerC2">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperFingerC2">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperFingerC3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperFingerC2->GripperFingerC3">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperFingerC3">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperFingerC4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperFingerC3->GripperFingerC4">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperFingerC4">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<transmission name ="Trans_GripperFingerC5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="GripperFingerC4->GripperFingerC5">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Motor_GripperFingerC5">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+
 </robot>
