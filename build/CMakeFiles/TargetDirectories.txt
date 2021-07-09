@@ -35,3 +35,15 @@
 /home/sergio/robot/build/gtest/googlemock/gtest/CMakeFiles/list_install_components.dir
 /home/sergio/robot/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir
 /home/sergio/robot/build/gtest/googlemock/gtest/CMakeFiles/rebuild_cache.dir
+/home/sergio/robot/build/dexarm_robot/CMakeFiles/install/strip.dir
+/home/sergio/robot/build/dexarm_robot/CMakeFiles/list_install_components.dir
+/home/sergio/robot/build/dexarm_robot/CMakeFiles/edit_cache.dir
+/home/sergio/robot/build/dexarm_robot/CMakeFiles/rebuild_cache.dir
+/home/sergio/robot/build/dexarm_robot/CMakeFiles/std_msgs_generate_messages_eus.dir
+/home/sergio/robot/build/dexarm_robot/CMakeFiles/std_msgs_generate_messages_cpp.dir
+/home/sergio/robot/build/dexarm_robot/CMakeFiles/std_msgs_generate_messages_lisp.dir
+/home/sergio/robot/build/dexarm_robot/CMakeFiles/install.dir
+/home/sergio/robot/build/dexarm_robot/CMakeFiles/std_msgs_generate_messages_nodejs.dir
+/home/sergio/robot/build/dexarm_robot/CMakeFiles/std_msgs_generate_messages_py.dir
+/home/sergio/robot/build/dexarm_robot/CMakeFiles/install/local.dir
+/home/sergio/robot/build/dexarm_robot/CMakeFiles/test.dir

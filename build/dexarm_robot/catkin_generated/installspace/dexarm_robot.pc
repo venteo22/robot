@@ -1,0 +1,8 @@
+prefix=/home/sergio/robot/install
+
+Name: dexarm_robot
+Description: Description of dexarm_robot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

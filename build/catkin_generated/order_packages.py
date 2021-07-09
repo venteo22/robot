@@ -2,4 +2,4 @@
 source_root_dir = '/home/sergio/robot/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/home/sergio/ybisk/devel;/home/sergio/arm_kinematics_ws/devel;/opt/ros/melodic'.split(';') if '/home/sergio/ybisk/devel;/home/sergio/arm_kinematics_ws/devel;/opt/ros/melodic' != '' else []
+underlay_workspaces = '/home/sergio/robot/devel;/home/sergio/arm_kinematics_ws/devel;/opt/ros/melodic'.split(';') if '/home/sergio/robot/devel;/home/sergio/arm_kinematics_ws/devel;/opt/ros/melodic' != '' else []
