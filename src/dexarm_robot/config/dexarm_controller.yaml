@@ -2,10 +2,10 @@ arm_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
     - bases
-    - B_rot->In_1
-    - In_1->Join
-    - Join->In_2
-    - In_2->EE
+    #- B_rot->In_1
+    #- In_1->Join
+    #- Join->In_2
+    #- In_2->EE
     #- Join->Out_1
     #- Join->Out_2
     #- GripperMount->GripperAxis

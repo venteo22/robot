@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<robot name="DexArm_unofficial">
+  <!-- 
+    Components: 
+      - B_Fix       L31
+      - F_Rot       L44
+      - In_1        L67
+      - In_2        L114
+      - Out_1       L161
+      - Out_2       L185
+      - Join        L90
+      - EE          L137
+    Modules: (Go to line and uncomment your choice)
+      - Suction     L209
+      - Gripper     L234
+
+    Joints:
+      Bases:
+        - B_Fix -> B_Rot   [-110 deg, 110deg]           L59
+      Inner Arms:
+        - B_Rot -> In_1    [0, pi/2]                    L81
+        - In_1  -> Join    [mimic -1 * B_Rot -> In_1]   L104
+        - Join  -> I_2     [-0.6, 1.2]                  L128
+        - In_2  -> EE      [mimic -1 * Join  -> In_2]   L151
+      Outer Arms:
+        - Join  -> Out_1   [mimic  1 * B_Rot -> In_1]   L175
+        - Join  -> Out_2   [mimic  1 * Join  -> In_2]   L199
+  -->
+<!-- Anchor and rotating base -->
+<link name="world"/>
+  <link name="B_Fix">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="./STL/00-B_Fix.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="./STL/00-B_Fix.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="B_Fix"/>
+  </joint>
+  <link name="B_Rot">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="./STL/01-B_Rot.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="./STL/01-B_Rot.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="bases" type="revolute">
+    <parent link="B_Fix" />
+    <child link="B_Rot" />
+    <limit effort="30" lower="-1.91986" upper="1.91986" velocity="1.74533" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1" />
+  </joint>
+
+                     <!--TRANSMISSION-->
+
+<transmission name ="Trans_B_rot">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="bases">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="B_rot_Motor">
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+
+</robot>
