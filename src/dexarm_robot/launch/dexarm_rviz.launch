@@ -1,10 +1,10 @@
 <launch>
 
-    <arg name="model" default="$(find dexarm_robot)/src/urdf/simpledexarm.urdf"/>
+    <arg name="model" default="$(find dexarm_robot)/urdf/simpledexarm.urdf"/>
     <arg name="gui" default="true" />
     <arg name="rvizconfig" default="$(find urdf_tutorial)/rviz/urdf.rviz" />
   
-    <param name="robot_description" textfile="$(find dexarm_robot)/src/urdf/simpledexarm.urdf" />
+    <param name="robot_description" textfile="$(find dexarm_robot)/urdf/simpledexarm.urdf" />
     <param name="use_gui" value="$(arg gui)"/>
   
     <node name="jsp_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />

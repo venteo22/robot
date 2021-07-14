@@ -32,13 +32,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="./STL/00-B_Fix.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:./STL/00-B_Fix.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="./STL/00-B_Fix.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:./STL/00-B_Fix.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -50,13 +50,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="./STL/01-B_Rot.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:./STL/01-B_Rot.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="./STL/01-B_Rot.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:./STL/01-B_Rot.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -84,6 +84,6 @@
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
             <robotNamespace>/</robotNamespace>
         </plugin>
-    </gazebo>
+</gazebo>
 
 </robot>
